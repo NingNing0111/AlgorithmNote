@@ -1,0 +1,140 @@
+site_name: Ning的算法刷题笔记
+site_author: Ning
+site_url: https://ningning0111.github.io/AlgorithmNote
+
+theme:
+  name: material
+  # custom_dir: overrrides
+  font:
+    text: Bitter
+  icon:
+    logo: material/library-shelves
+    admonition:
+      <type>: material/file-alert-outline
+
+  favicon: imags/favicon.ico
+  # img/11.ico
+  palette:
+    - primary: blue grey
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      primary: blue grey # 上方的
+      accent: cyan # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate # 夜间模式
+      primary: black
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+  features:
+    - navigation.instant #- header.autohide  #自动隐藏
+    - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
+    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
+    - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
+    #- navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
+    - navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+    - navigation.expand # 打开Tab时左侧目录全部展开
+    - navigation.indexes #启用节索引页后，可以将文档直接附加到节
+    - search.share #搜索分享按钮
+    - content.tabs.link
+  language: zh # 一些提示性的文字会变成中文
+  icon:
+    repo: fontawesome/brands/github #右上角图标
+repo_url: https://github.com/2043393364/Algorithm-Competition # 右上角点击跳转的链接
+repo_name: GitHub项目地址 # 右上角的名字
+
+nav:
+    - '概述' : 'index.md'
+    - '搜索篇':
+        - '深度优先搜索(DFS)' : 'DFS.md'
+        - '广度优先搜索(BFS)' : 'BFS.md'
+
+    - '背包问题':
+        - '4种背包模型' : './KnapsackProblem/背包问题.md'
+        - '例题' : './KnapsackProblem/背包问题例题.md'
+
+    - '动态规划入门':
+        - '从暴力递归到动态规划' : './DP_Beginner/初识动态规划--从暴力递归到动态规划.md'
+        - '动态规划例题' : './DP_Beginner/动态规划例题.md'
+
+    - '动态规划_九章版':
+        - '动态规划入门' : './DP_JiuZhang/动态规划入门.md'
+        - '动态规划_坐标型&位操作型' : './DP_JiuZhang/动态规划_坐标型&位操作型.md'
+        - '动态规划_序列型' : './DP_JiuZhang/动态规划_序列型.md'
+        - '动态规划_划分型' : './DP_JiuZhang/动态规划_划分型.md'
+        - '动态规划_博弈型' : './DP_JiuZhang/动态规划_博弈型.md'
+
+    - '动态规划_LeetCode':
+        - '动态规划简介' : './DP_LeetCode/动态规划简介.md'
+        - '线性动态规划' : './DP_LeetCode/线性动态规划.md'
+
+    - '其它':
+        - '并查集' : 'UnionFindSet.md'
+        - '快速幂' : 'Math_FastPower.md'
+
+plugins:
+  - search
+
+
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  # - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+  - pymdownx.arithmatex:  # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: "\ue157"
+
+extra_javascript:
+  - js/extra.js
+  - js/mathjax.js
+  - mathjax-config.js
+#  - js/backgroud.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+#  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+extra_css:
+  - css/extra.css
+  - css/video.css
