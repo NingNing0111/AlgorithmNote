@@ -53,6 +53,14 @@ repo_name: GitHub项目地址 # 右上角的名字
 
 nav:
     - '概述' : 'index.md'
+    - '排序算法':
+        - '冒泡排序' : './sortAlgorithm/bubbleSort.md'
+        - '选择排序' : './sortAlgorithm/selectionSort.md'
+        - '插入排序' : './sortAlgorithm/insertionSort.md'
+        - '希尔排序' : './sortAlgorithm/shellSort.md'
+        - '堆排序' : './sortAlgorithm/heapSort.md'
+        - '快速排序' : './sortAlgorithm/quickSort.md'
+        - '归并排序' : './sortAlgorithm/mergeSort.md'
     - '搜索篇':
         - '深度优先搜索(DFS)' : './search/DFS.md'
         - '回溯算法' : './search/回溯算法.md'

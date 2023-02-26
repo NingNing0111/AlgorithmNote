@@ -4,13 +4,13 @@
 
 ## 已完结
 
-**DFS、BFS、拓扑排序、背包问题、并查集、快速幂、DP入门**
+**DFS、回溯算法、BFS、拓扑排序、背包问题、并查集、快速幂、DP入门、排序算法**
 
 ## 更新中
 
 **DP进阶、前缀和、堆、....、根本学不完o(╥﹏╥)o**
 
- [GitHub项目地址](https://github.com/2043393364/Algorithm-Competition)
+ [GitHub项目地址](https://github.com/ningning0111/AlgorithmNote)
 
  [OJ竞赛学习网站](https://oi-wiki.org/)
 
