@@ -10,25 +10,27 @@
         <meta name="author" content="Ning">
       
       
-        <link rel="canonical" href="https://ningning0111.github.io/AlgorithmNote/">
+        <link rel="canonical" href="https://ningning0111.github.io/AlgorithmNote/content/DP_LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E4%BB%8B/">
       
       
+        <link rel="prev" href="../../DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%8D%9A%E5%BC%88%E5%9E%8B/">
       
-        <link rel="next" href="content/sortAlgorithm/bubbleSort/">
       
-      <link rel="icon" href="content/imags/favicon.ico">
+        <link rel="next" href="../%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%8D%95%E4%B8%B2/">
+      
+      <link rel="icon" href="../../imags/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
     
     
       
-        <title>Ning算法刷题笔记</title>
+        <title>动态规划简介 - Ning算法刷题笔记</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0d440cfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -44,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="resources/css/extra.css">
+      <link rel="stylesheet" href="../../../resources/css/extra.css">
     
-      <link rel="stylesheet" href="resources/css/video.css">
+      <link rel="stylesheet" href="../../../resources/css/video.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#注意" class="md-skip">
+        <a href="#动态规划背景" class="md-skip">
           跳转至
         </a>
       
@@ -91,7 +93,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Ning算法刷题笔记" class="md-header__button md-logo" aria-label="Ning算法刷题笔记" data-md-component="logo">
+    <a href="../../.." title="Ning算法刷题笔记" class="md-header__button md-logo" aria-label="Ning算法刷题笔记" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概述
+              动态规划简介
             
           </span>
         </div>
@@ -212,12 +214,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       概述
     </a>
   </li>
@@ -232,7 +232,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="content/sortAlgorithm/bubbleSort/" class="md-tabs__link">
+      <a href="../../sortAlgorithm/bubbleSort/" class="md-tabs__link">
         排序算法
       </a>
     </li>
@@ -248,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="content/search/DFS/" class="md-tabs__link">
+      <a href="../../search/DFS/" class="md-tabs__link">
         搜索篇
       </a>
     </li>
@@ -264,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="content/KnapsackProblem/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="md-tabs__link">
+      <a href="../../KnapsackProblem/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="md-tabs__link">
         背包问题
       </a>
     </li>
@@ -280,7 +280,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="content/DP_Beginner/%E5%88%9D%E8%AF%86%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92--%E4%BB%8E%E6%9A%B4%E5%8A%9B%E9%80%92%E5%BD%92%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="md-tabs__link">
+      <a href="../../DP_Beginner/%E5%88%9D%E8%AF%86%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92--%E4%BB%8E%E6%9A%B4%E5%8A%9B%E9%80%92%E5%BD%92%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="md-tabs__link">
         动态规划入门
       </a>
     </li>
@@ -296,7 +296,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="content/DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+      <a href="../../DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%85%A5%E9%97%A8/" class="md-tabs__link">
         动态规划_九章版
       </a>
     </li>
@@ -306,13 +306,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="content/DP_LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E4%BB%8B/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         动态规划_LeetCode
       </a>
     </li>
@@ -328,7 +330,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="content/UnionFindSet/" class="md-tabs__link">
+      <a href="../../UnionFindSet/" class="md-tabs__link">
         其它
       </a>
     </li>
@@ -356,7 +358,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Ning算法刷题笔记" class="md-nav__button md-logo" aria-label="Ning算法刷题笔记" data-md-component="logo">
+    <a href="../../.." title="Ning算法刷题笔记" class="md-nav__button md-logo" aria-label="Ning算法刷题笔记" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -385,66 +387,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          概述
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         概述
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#已完结" class="md-nav__link">
-    已完结
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#更新中" class="md-nav__link">
-    更新中
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#学习路线" class="md-nav__link">
-    学习路线
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -502,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/sortAlgorithm/bubbleSort/" class="md-nav__link">
+      <a href="../../sortAlgorithm/bubbleSort/" class="md-nav__link">
         冒泡排序
       </a>
     </li>
@@ -516,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/sortAlgorithm/selectionSort/" class="md-nav__link">
+      <a href="../../sortAlgorithm/selectionSort/" class="md-nav__link">
         选择排序
       </a>
     </li>
@@ -530,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/sortAlgorithm/insertionSort/" class="md-nav__link">
+      <a href="../../sortAlgorithm/insertionSort/" class="md-nav__link">
         插入排序
       </a>
     </li>
@@ -544,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/sortAlgorithm/shellSort/" class="md-nav__link">
+      <a href="../../sortAlgorithm/shellSort/" class="md-nav__link">
         希尔排序
       </a>
     </li>
@@ -558,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/sortAlgorithm/heapSort/" class="md-nav__link">
+      <a href="../../sortAlgorithm/heapSort/" class="md-nav__link">
         堆排序
       </a>
     </li>
@@ -572,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/sortAlgorithm/quickSort/" class="md-nav__link">
+      <a href="../../sortAlgorithm/quickSort/" class="md-nav__link">
         快速排序
       </a>
     </li>
@@ -586,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/sortAlgorithm/mergeSort/" class="md-nav__link">
+      <a href="../../sortAlgorithm/mergeSort/" class="md-nav__link">
         归并排序
       </a>
     </li>
@@ -645,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/search/DFS/" class="md-nav__link">
+      <a href="../../search/DFS/" class="md-nav__link">
         深度优先搜索(DFS)
       </a>
     </li>
@@ -659,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/search/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="md-nav__link">
+      <a href="../../search/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="md-nav__link">
         回溯算法
       </a>
     </li>
@@ -673,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/search/BFS/" class="md-nav__link">
+      <a href="../../search/BFS/" class="md-nav__link">
         广度优先搜索(BFS)
       </a>
     </li>
@@ -730,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/KnapsackProblem/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../KnapsackProblem/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="md-nav__link">
         4种背包模型
       </a>
     </li>
@@ -744,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/KnapsackProblem/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E4%BE%8B%E9%A2%98/" class="md-nav__link">
+      <a href="../../KnapsackProblem/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E4%BE%8B%E9%A2%98/" class="md-nav__link">
         例题
       </a>
     </li>
@@ -801,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_Beginner/%E5%88%9D%E8%AF%86%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92--%E4%BB%8E%E6%9A%B4%E5%8A%9B%E9%80%92%E5%BD%92%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="md-nav__link">
+      <a href="../../DP_Beginner/%E5%88%9D%E8%AF%86%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92--%E4%BB%8E%E6%9A%B4%E5%8A%9B%E9%80%92%E5%BD%92%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="md-nav__link">
         从暴力递归到动态规划
       </a>
     </li>
@@ -815,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_Beginner/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%BE%8B%E9%A2%98/" class="md-nav__link">
+      <a href="../../DP_Beginner/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%BE%8B%E9%A2%98/" class="md-nav__link">
         动态规划例题
       </a>
     </li>
@@ -878,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%85%A5%E9%97%A8/" class="md-nav__link">
+      <a href="../../DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%85%A5%E9%97%A8/" class="md-nav__link">
         动态规划入门
       </a>
     </li>
@@ -892,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DP_JiuZhang/动态规划_坐标型&位操作型.md" class="md-nav__link">
+      <a href="../../../DP_JiuZhang/动态规划_坐标型&位操作型.md" class="md-nav__link">
         动态规划_坐标型&位操作型
       </a>
     </li>
@@ -906,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%BA%8F%E5%88%97%E5%9E%8B/" class="md-nav__link">
+      <a href="../../DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%BA%8F%E5%88%97%E5%9E%8B/" class="md-nav__link">
         动态规划_序列型
       </a>
     </li>
@@ -920,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%88%92%E5%88%86%E5%9E%8B/" class="md-nav__link">
+      <a href="../../DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%88%92%E5%88%86%E5%9E%8B/" class="md-nav__link">
         动态规划_划分型
       </a>
     </li>
@@ -934,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%8D%9A%E5%BC%88%E5%9E%8B/" class="md-nav__link">
+      <a href="../../DP_JiuZhang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%8D%9A%E5%BC%88%E5%9E%8B/" class="md-nav__link">
         动态规划_博弈型
       </a>
     </li>
@@ -954,16 +901,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
         
@@ -978,7 +925,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           动态规划_LeetCode
@@ -989,11 +936,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="content/DP_LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         动态规划简介
       </a>
+      
     </li>
   
 
@@ -1042,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_LeetCode/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%8D%95%E4%B8%B2/" class="md-nav__link">
+      <a href="../%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%8D%95%E4%B8%B2/" class="md-nav__link">
         单串问题
       </a>
     </li>
@@ -1056,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/DP_LeetCode/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%B8%A6%E7%BB%B4%E5%BA%A6%E7%9A%84%E5%8D%95%E4%B8%B2/" class="md-nav__link">
+      <a href="../%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92_%E5%B8%A6%E7%BB%B4%E5%BA%A6%E7%9A%84%E5%8D%95%E4%B8%B2/" class="md-nav__link">
         带维度的单串
       </a>
     </li>
@@ -1120,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/UnionFindSet/" class="md-nav__link">
+      <a href="../../UnionFindSet/" class="md-nav__link">
         并查集
       </a>
     </li>
@@ -1134,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/Math_FastPower/" class="md-nav__link">
+      <a href="../../Math_FastPower/" class="md-nav__link">
         快速幂
       </a>
     </li>
@@ -1168,35 +1125,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#已完结" class="md-nav__link">
-    已完结
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#更新中" class="md-nav__link">
-    更新中
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#学习路线" class="md-nav__link">
-    学习路线
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1214,24 +1142,36 @@
 
 
 
-<h1 id="注意">注意<a class="headerlink" href="#注意" title="Permanent link"></a></h1>
-<p>移动端不支持Latex渲染，会导致文本中掺杂一些"()"符号，建议使用PC端浏览！！！</p>
+<h1 id="动态规划背景">动态规划背景<a class="headerlink" href="#动态规划背景" title="Permanent link"></a></h1>
+<p>&emsp;&emsp;动态规划(Dynamic programming,简称DP)是一种在数学、管理科学、计算机科学、经济学和生物信息学中使用的，通过把<strong>原问题分解为相对简单的子问题的方式求解复杂问题</strong>的方法。</p>
+<p>&emsp;&emsp;动态规划不是某一种具体的算法，而是一种算法思想:<strong>若要解一个给定问题，我们需要解其不同部分（即子问题），再根据子问题的解得出原问题的解</strong>。</p>
+<p>&emsp;&emsp;应用这种算法思想解决问题的可行性，对子问题与原问题的关系，以及子问题之间的关系这两方面有一些要求，它们分别对应了<strong>最优子结构</strong>和<strong>重复子问题</strong>。</p>
+<ol>
+<li><strong>最优子结构</strong>
+&emsp;&emsp;<strong>最优子结构规定的是子问题与原问题的关系</strong>:动态规划要解决的都是一些问题的最优解，即从很多解决问题的方案中找到最优的一个。当我们在求一个问题最优解的时候，如果可以把这个问题分解成多个子问题，然后递归地找到每个子问题的最优解，最后通过一定的数学方法对各个子问题的最优解进行组合得到最终的结果。总结来说就是<strong>一个问题的最优解是由它的各个子问题的最优解决定的</strong>。
+&emsp;&emsp;<strong>将子问题的解进行组合可以得到原问题的解</strong>是动态规划可行性的关键。在解题中一般用<strong>动态转移方程</strong>描述这种组合。例如原问题的解为<span class="arithmatex">\(f(n)\)</span>,其中<span class="arithmatex">\(f(n)\)</span>也叫状态。状态转移方程<span class="arithmatex">\(f(n) = f(n-1) + f(n-2)\)</span>就描述了一种原问题与子问题的组合关系。在原问题上有一些选择，不同选择可能对应不同的子问题或者不同的组合方式。例如：</li>
+</ol>
+<div class="arithmatex">\[
+f(n) = \begin{cases}
+f(n-1) + f(n-2) &amp; \text{n = 2k} \\
+f(n-1) &amp; \text{n = 2k+1}
+\end{cases}
+\]</div>
+<p><span class="arithmatex">\(n=2k\)</span>和n=<span class="arithmatex">\(2k+1\)</span>对应了原问题<span class="arithmatex">\(n\)</span>上不同的选择，分别对应了不同的子问题和组合方式。<strong>一旦找到了最优子结构，也就能推导出状态转移方程<span class="arithmatex">\(f(n)\)</span></strong>,通过这个状态转移方程，我们就能很快的写出问题的递归实现方法。
+<img alt="" src="../imags/jj_1.png" /></p>
+<ol>
+<li><strong>重复子问题</strong>
+&emsp;&emsp;<strong>重复子问题规定的是子问题与子问题的关系</strong>：当我们递归地寻找每个子问题的最优解的时候，有可能会重复地遇到一些更小的子问题，而且这些子问题会重叠地出现在子问题里，出现这样的情况，会有很多重复的计算，动态规划可以保证每个重叠的子问题只会被求解一次。<strong>当重复的问题很多的时候，动态规划可以减少很多重复的计算</strong>。
+&emsp;&emsp;重复子问题不是保证解的正确性所必须的条件，但如果递归求解子问题时，没有出现重复子问题，则没有必要使用动态规划，直接使用递归就可以了。</li>
+</ol>
+<p>&emsp;&emsp;解决动规规划问题的核心：<strong>找出子问题及其子问题与原问题的关系</strong>。找到了子问题以及原问题的关系，就可以递归地求解子问题了。但重叠的子问题使得直接递归会有很多重复计算，于是可以使用记忆化搜索对子问题的结果进行存储。因此，<strong>一定程度上，记忆化搜索就等于动态规划</strong>。</p>
+<p>&emsp;&emsp;动态规划算法中关于最优子结构和重复子问题的理解的关键点：</p>
 <ul>
-<li>
-<p>已搭建完成我的个人博客。<a href="http://rjkfteam.top">点此进入</a></p>
-</li>
-<li>
-<p>访问<a href="https://ningning0111.github.io/CSNotes/">CSNotes项目</a>查看我的计算机相关课程笔记</p>
-</li>
+<li>证明问题的方案中包含一种选择，选择之后留下一个或多个子问题</li>
+<li>设计子问题的递归描述方式</li>
+<li>证明对原问题的最优解包括了对所有子问题的最优解</li>
+<li>证明子问题是重叠的(<strong>若原问题与子问题无重叠，则动态规划与递归的效率是一致的，就没必要使用动态规划了</strong>)  </li>
 </ul>
-<h2 id="已完结">已完结<a class="headerlink" href="#已完结" title="Permanent link"></a></h2>
-<p><strong>DFS、回溯算法、BFS、拓扑排序、背包问题、并查集、快速幂、DP入门、排序算法</strong></p>
-<h2 id="更新中">更新中<a class="headerlink" href="#更新中" title="Permanent link"></a></h2>
-<p><strong>DP进阶、前缀和、堆、....、根本学不完o(╥﹏╥)o</strong></p>
-<p><a href="https://github.com/ningning0111/AlgorithmNote">GitHub项目地址</a></p>
-<p><a href="https://oi-wiki.org/">OJ竞赛学习网站</a></p>
-<h2 id="学习路线">学习路线<a class="headerlink" href="#学习路线" title="Permanent link"></a></h2>
-<p><img alt="" src="content/imags/XCPC.jpg" /></p>
 
 
 
@@ -1298,16 +1238,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "navigation.expand", "navigation.indexes", "search.share", "content.tabs.link"], "search": "assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "navigation.expand", "navigation.indexes", "search.share", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.4b2c34cd.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
       
-        <script src="resources/js/extra.js"></script>
+        <script src="../../../resources/js/extra.js"></script>
       
-        <script src="resources/js/mathjax.js"></script>
+        <script src="../../../resources/js/mathjax.js"></script>
       
-        <script src="resources/mathjax-config.js"></script>
+        <script src="../../../resources/mathjax-config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
